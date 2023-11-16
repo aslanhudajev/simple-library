@@ -4,10 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Simple Library - Add your favorite books!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <button id="add">Add a book</button>
+    <div class="add-container hidden">
+        <div class="add-form">
+            <h2>Add new book</h2>
+            <form action="submit">
+                <input class="form-text" type="text" name="title" id="in-title" placeholder="Title">
+
+                <input class="form-text" type="tel" name="author" id="in-author" placeholder="Author">
+
+                <input class="form-text" type="text" name="pages" id="in-pages" inputmode="numeric" placeholder="Pages">
+
+                <button class="btn green" type="submit" id="add">Add book</button>
+            </form>
+        </div>
+    </div>
+
+    <header class="header sticky">
+        <h1 class="logo">simple library</h1>
+    </header>
+
+    <div class="container">
+        <button class="btn" id="show-add">Add a book</button>
+        <div class="book-container">
+
+        </div>
+    </div>
 </body>
 </html>
